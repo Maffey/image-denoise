@@ -1,5 +1,5 @@
 #! python3
-"""Based on 'n' numbers of matrices, create an average matrix of them (image denoise)."""
+"""Based on 'n' number of matrices, create an average matrix of them (image denoise)."""
 
 import argparse
 import math
