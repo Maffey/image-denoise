@@ -1,5 +1,5 @@
 # image-denoise
-Based on 'n' numbers of matrices, create an average matrix of them (image denoise).
+Based on 'n' number of matrices, create an average matrix of them (image denoise).
 
 ## Reading data
 File with data is given in a .txt file.
