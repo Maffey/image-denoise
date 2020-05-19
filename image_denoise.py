@@ -6,7 +6,7 @@ First line is the number of rows and columns in matrices (their size) separated 
 Following lines are matrices separated by spaces, one line for each matrix.
 If the calculations succeed, script appends the result at the end of the file.
 
-Running the program displays bunch of useful information for the calculations,
+Running the program displays in the terminal bunch of useful information for the calculations
 such as average, standard deviation and error for each pixel calculated.
 
 The program can run in two modes:
