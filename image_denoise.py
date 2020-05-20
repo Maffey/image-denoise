@@ -129,18 +129,18 @@ def print_matrix(dimensions, matrix):
 def print_matrices_info(dimensions, matrices):
     """Prints basic info about matrices."""
     for matrix in matrices:
-        print(f"STANDARD_DEVIATION: {calculate_standard_deviation(dimensions, matrix)}\n")
+        print(f"VARIANCE: {calculate_variance(dimensions, matrix)}\n")
 
 
 # Additional functions for images of different quality (weights applied).
-def calculate_standard_deviation(dimensions, matrix):
-    """Calculates standard deviation for SINGLE matrix. It is later used to establish weight values for matrices."""
+def calculate_variance(dimensions, matrix):
+    """Calculates  variance for SINGLE matrix. It is later used to establish weight values for matrices."""
     size = dimensions[0] * dimensions[1]
     average = sum(matrix) / size
     print(f"MATRIX DATA:\n{matrix}")
     print(f"AVERAGE VALUE: {average}")
-    standard_deviation = sum([(element - average) ** 2 for element in matrix]) / (size - 1)
-    return standard_deviation
+    variance = sum([(element - average) ** 2 for element in matrix]) / (size - 1)
+    return variance
 
 
 def calculate_error(dimensions, resulting_matrix, matrices, weights):
