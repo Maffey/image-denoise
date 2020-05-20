@@ -146,11 +146,14 @@ def calculate_standard_deviation(dimensions, matrix):
 def calculate_error(dimensions, resulting_matrix, matrices, weights):
     """Calculates the error for each pixel in the resulting matrix for weighted mode and prints it to the terminal."""
     size = dimensions[0] * dimensions[1]
-    for i in range(size):
-        pixel_deviation = sum([((matrix[i] - resulting_matrix[i]) ** 2) * weights[j]
-                               for j, matrix in enumerate(matrices)]) / (len(matrices) - 1)
-        error = round(math.sqrt(pixel_deviation / sum(weights)))
-        print(f"Pixel #{i + 1}: {resulting_matrix[i]} ± {error}")
+    try:
+        for i in range(size):
+            pixel_deviation = sum([((matrix[i] - resulting_matrix[i]) ** 2) * weights[j]
+                                   for j, matrix in enumerate(matrices)]) / (len(matrices) - 1)
+            error = math.sqrt(pixel_deviation / sum(weights))
+            print(f"Pixel #{i + 1}: {resulting_matrix[i]} ± {error}")
+    except IndexError:
+        print("[-] Error! Not enough weights for all the matrices.")
 
 
 # Get the path of the file from the user's input.
