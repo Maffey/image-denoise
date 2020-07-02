@@ -79,7 +79,7 @@ def calculate_average_matrix(dimensions, matrices):
         # It's important to note that rounding uses IEEE 754 standard.
         # Important: the line below is susceptible to change in case of using it for weighted calculations.
         # Change sum(weights) to "size" for non-weighted option.
-        positional_average = round(positional_sum / len(matrices))
+        positional_average = round(positional_sum / len(matrices))  # Remove 'round()' for precise results.
         average_matrix.append(positional_average)
     return average_matrix
 
@@ -100,7 +100,7 @@ def calculate_average_matrix_weighted(dimensions, matrices, weights):
         # It's important to note that rounding uses IEEE 754 standard.
         # Important: the line below is susceptible to change in case of using it for weighted calculations.
         # Change sum(weights) to "size" for non-weighted option.
-        positional_average = round(positional_sum / sum(weights))
+        positional_average = round(positional_sum / sum(weights))  # Remove 'round()' for precise results.
         average_matrix.append(positional_average)
     return average_matrix
 
